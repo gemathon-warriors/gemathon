@@ -1,0 +1,21 @@
+<li class="span4 center">
+  <div class="item">
+    <!-- Team member image -->
+    <img class="img-circle" src=<%= "assets/images/team_member/#{name}.png" %> alt="Treble" width='350' height='300'>
+    <!-- Team memeber details, activated on hover -->
+    <div class="about-overlay img-circle">
+      <div class="social-icons sicon-white">
+        <a href="<%= facebook(name) %>" class="sicon-facebook"><i>Facebook</i></a>
+        <a href="<%= twitter(name) %>" class="sicon-twitter"><i>Twitter</i></a>
+        <a href="<%= linkedin(name) %>" class="sicon-linkedin"><i>LinkedIn</i></a>
+      </div>
+    </div>
+  </div>
+  <!-- Team member name and function -->
+  <h5>
+    <%= name %><br/>
+    <small>Developer</small>
+  </h5>
+  <!-- Team member short info -->
+  <p class="smallFontBy08"><%= quote %>.</p>
+</li>

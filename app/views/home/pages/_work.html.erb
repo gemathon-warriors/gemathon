@@ -1,0 +1,70 @@
+<!-- PAGE | WORK -->
+<div class="pages page-work" id="page-work">
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h4 class="line-divider">Gemathon</h4>
+      <h1>Gems</h1>
+      <!-- Short desciption about Work in general -->
+      <div class="row">
+        <div class="span8 offset2">
+          <p>
+            Yes, we're trying some new stuff. Some of it might work. Some of it might not. This, of course, is the nature of episodic television. They can't all be gems.
+          </p>
+        </div>
+      </div>
+      <!-- Sub menu -->
+      <!-- 
+            Params: 
+                plugin-filter: Defines links for filtering.
+            -->
+      <nav class="submenu">
+        <ul>
+          <li>
+            <a href="#" class="plugin-filter active" data-filter="all">All</a>
+          </li>
+          <li>
+            <a href="#" class="plugin-filter" data-filter="database">Database</a>
+          </li>
+          <li>
+            <a href="#" class="plugin-filter" data-filter="css">CSS</a>
+          </li>
+          <li>
+            <a href="#" class="plugin-filter" data-filter="time">Time</a>
+          </li>
+          <li>
+            <a href="#" class="plugin-filter" data-filter="date">Date</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- End Header -->
+    <!-- Article -->
+    <article>
+      <!-- Portfolio items
+                Params: 
+                    plugin-filter-elements: Defines items for filtering, each item has class which defines filter value.
+                    portfolio-items: Customise portfolio items for hover effect.
+            -->
+      <ul class="thumbnails plugin-filter-elements portfolio-items">
+        <%= render :partial => 'home/portfolio_items/database' %>
+        <%= render :partial => 'home/portfolio_items/css' %>
+        <%= render :partial => 'home/portfolio_items/time' %>
+        <%= render :partial => 'home/portfolio_items/date' %>
+      </ul>
+    </article>
+    <!-- End Article -->
+    <!-- Footer -->
+    <footer>
+      <div class="show-more-cube">
+        <a href="#" data-destination="plugin-filter-elements" data-insert="appendTo" data-action="remove">
+          <span>Go
+            <br/>
+            Up</span>
+        </a>
+      </div>
+    </footer>
+    <!-- End footer -->
+  </div>
+</div>
+<!-- END PAGE | WORK -->

@@ -1,0 +1,29 @@
+<!-- PAGE | ABOUT -->
+<div class="pages page-about" id="page-about">
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h4 class="line-divider">About</h4>
+      <h1>Meet The Team</h1>
+      <div class="row">
+        <div class="span8 offset2">
+          <p>
+            The Warrior's !
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Article -->
+    <article>
+      <!-- List of people and description with their contact details which are visable on hover -->
+      <ul class="thumbnails about-items">
+        <% @team_member_names.each do |name, quote|%>
+          <%= render 'home/about/team_member_info' , :name => name, :quote => quote %>
+        <% end %>
+      </ul>
+    </article>
+    <!-- End Article -->
+  </div>
+</div>
+<!-- END PAGE | ABOUT -->
