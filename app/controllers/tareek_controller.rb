@@ -1,8 +1,8 @@
 class TareekController < ApplicationController
 
   def calc
-    method = params[:commit].split(' ').join(_)
-    self.send()
+    method = params[:commit].split(' ').join('_')
+    self.send(method.downcase.to_sym)
     render json:  { date: @result }
   end
 

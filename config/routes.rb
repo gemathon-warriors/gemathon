@@ -3,7 +3,7 @@ Warriors::Application.routes.draw do
   get "home/spicon_gem"
   get "home/tareek"
 
-  # post "tareek/get_middle_of_next_month_date"
+  match '/plugins/twitter' => 'home#twitter' , via: [:get, :post]
 
   post "tareek/calc"
 
