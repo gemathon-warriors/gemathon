@@ -27,3 +27,4 @@ group :production do
 end
 
 gem 'twitter'
+gem 'quiet_assets'
