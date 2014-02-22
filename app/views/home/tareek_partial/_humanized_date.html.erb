@@ -1,0 +1,24 @@
+<div class='center'>
+  <%= form_tag(tareek_humanized_date_path, remote: true, id: 'humanized_date', class: 'form-inline') do %>
+    <%= text_field_tag 'date', '', class: 'span4', placeholder: 'Date(eg. 1/12/2012)', required: true %>
+    <br /><br />
+    <span id='result_humanized' class="span4 center" style="margin-left:35%">Enter Data</span>
+    <br /><br />
+    <%= submit_tag "MM DD", class: 'span5' %>
+    <%= submit_tag "DD-MM-YY", class: 'span5' %>
+    <br /><br />
+    <%= submit_tag "HH:SS", class: 'span5' %>
+    <%= submit_tag "MM/DD/YYYY HH:MM:SS", class: 'span5' %>
+  <% end %>
+</div>
+<script type="text/javascript">
+  $(document).ready(
+        function(){
+             $("#humanized_date").bind("ajax:success",
+                      function(evt, data, status, xhr){
+                           $("#result_humanized").text('Date found: ' + data.date);
+              }).bind("ajax:error", function(evt, data, status, xhr){
+                       $("#result_humanized").text('Enter valid data')
+              });
+   });
+</script>

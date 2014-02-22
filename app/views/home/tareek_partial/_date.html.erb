@@ -1,0 +1,28 @@
+<br /><br />
+<%= form_tag(tareek_calc_path, remote: true, id: 'get_middle_of_next_month_date', class: 'form-inline')  do %>
+  <div class='center'>
+    <%= number_field_tag 'year', '', class: 'span3', placeholder: 'Year(eg. 2014)', min: 1000, max: 9999, step: 1, required: true %>
+    <%= number_field_tag 'month', '', class: 'span3', placeholder: 'Month(eg. 12)', in: 1...13, step: 1, required: true %>
+  </div>
+  <br />
+  <span id='result_date' class="span4 center" style="margin-left:35%">Enter Data</span>
+  <br /><br />
+  <div class='center'>
+    <%= submit_tag "Next month middle date", class: 'span4' %>
+    <%= submit_tag "Past month middle date", class: 'span4' %>
+    <br /><br />
+    <%= submit_tag "Day on next month middle date", class: 'span5' %>
+    <%= submit_tag "Day on past month middle date", class: 'span5' %>
+  </div>
+<% end %>
+<script type="text/javascript">
+  $(document).ready(
+       function(){
+            $("#get_middle_of_next_month_date").bind("ajax:success",
+                     function(evt, data, status, xhr){
+                          $("#result_date").text('Date found: ' + data.date);
+             }).bind("ajax:error", function(evt, data, status, xhr){
+                      $("#result_date").text('Enter valid data')
+             });
+  });
+</script>

@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   end
 
   def spicon_gem
-
+    @classes = ["spicon-3s-6-normal", "spicon-3s-6-alternate","spicon-3s-6-reverse","spicon-4s-2-alternate_reverse"]
   end
 
   def tareek

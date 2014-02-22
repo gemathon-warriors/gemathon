@@ -7,6 +7,7 @@ Warriors::Application.routes.draw do
 
   post "tareek/calc"
   post "tareek/calc_day"
+  post "tareek/humanized_date"
 
   root 'home#index'
 
