@@ -6,6 +6,11 @@ class TareekController < ApplicationController
     render json:  { date: @result }
   end
 
+  def calc_day
+    @result = Tareek::Dates.date_of_next(params[:day])
+    render json:  { date: @result }
+  end
+
   def next_month_middle_date
     @result = Tareek::Dates.get_middle_of_next_month_date(params[:year],params[:month])
   end
