@@ -39,7 +39,7 @@
        function(){
             $("#get_middle_of_next_month_date").bind("ajax:success",
                      function(evt, data, status, xhr){
-                          $("#result").text('Date found: ' + data.date).show();
+                          $("#result").text('Date found: ' + data.date).show('fast');
              }).bind("ajax:error", function(evt, data, status, xhr){
                       $("#result").text('Enter valid data')
              });
