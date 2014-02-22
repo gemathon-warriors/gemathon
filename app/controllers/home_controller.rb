@@ -13,4 +13,8 @@ class HomeController < ApplicationController
 
   end
 
+  def tareek
+
+  end
+
 end

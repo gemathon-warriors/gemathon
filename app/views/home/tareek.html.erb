@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<section class="portfolio-item-details">
+  <div class="row-fluid">
+    <div class="span8">
+      <%= form_tag(tareek_calc_path, remote: true, id: 'get_middle_of_next_month_date', class: 'form-inline') %>
+      <div class='center'>
+        Returns middle date of next month of the specified year
+        <br /><br />
+        <%= number_field_tag 'year', '', class: 'span2', placeholder: 'Year', min: 1000, max: 9999, step: 1, required: true %>
+        <%= number_field_tag 'month', '', class: 'span2', placeholder: 'Month', in: 1...13, step: 1, required: true %>
+      </div>
+      <br />
+      <span id='result' class="span4 hide label" />
+      <br />
+      <%= submit_tag "Next month middle date", class: 'span4' %>
+      <%= submit_tag "Past month middle date", class: 'span4' %>
+      <%= submit_tag "Day on next month middle date", class: 'span4' %>
+    </div>
+    <div class="span4">
+      <div class="close-portfolio">
+        <span>&#10006;</span>
+        <div class="clearfix"></div>
+      </div>
+      <h5>Tareek Gem</h5>
+      <article class="smallFontBy08">
+        <p>
+          It gives you dates like, middle of the month, middle of next month etc.
+        </p>
+      </article>
+      <section class="website">
+        <h5>Visit Github Repo</h5>
+        <a href="https://github.com/gemathon-warriors/spicon" class="smallFontBy08">https://github.com/gemathon-warriors/tareek</a>
+      </section>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  $(document).ready(
+       function(){
+            $("#get_middle_of_next_month_date").bind("ajax:success",
+                     function(evt, data, status, xhr){
+                          $("#result").text('Date found: ' + data.date).show();
+             }).bind("ajax:error", function(evt, data, status, xhr){
+                      $("#result").text('Enter valid data')
+             });
+  });
+</script>

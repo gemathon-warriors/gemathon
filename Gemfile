@@ -16,7 +16,7 @@ group :doc do
 end
 
 gem 'spicon'
-
+gem 'tareek'
 
 group :development do
   gem 'sqlite3'
