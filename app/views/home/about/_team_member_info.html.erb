@@ -5,9 +5,9 @@
     <!-- Team memeber details, activated on hover -->
     <div class="about-overlay img-circle">
       <div class="social-icons sicon-white">
-        <a href="<%= facebook(name.split('/').last) %>" class="sicon-facebook"><i>Facebook</i></a>
-        <a href="<%= twitter(name.split('/').last) %>" class="sicon-twitter"><i>Twitter</i></a>
-        <a href="<%= linkedin(name.split('/').last) %>" class="sicon-linkedin"><i>LinkedIn</i></a>
+        <a href="<%= facebook(name.split('/').last.downcase) %>" class="sicon-facebook"><i>Facebook</i></a>
+        <a href="<%= twitter(name.split('/').last.downcase) %>" class="sicon-twitter"><i>Twitter</i></a>
+        <a href="<%= linkedin(name.split('/').last.downcase) %>" class="sicon-linkedin"><i>LinkedIn</i></a>
       </div>
     </div>
   </div>
