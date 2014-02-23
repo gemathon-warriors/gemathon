@@ -1,7 +1,7 @@
-<li class="span2 center">
+<li class="span4 center">
   <div class="item">
     <!-- Team member image -->
-    <img class="img-circle" src=<%= "assets/images/team_member/#{name}.png" %> alt="Treble" width='180' height='120'>
+    <img class="img-circle ashsih" src=<%= construct_image_path(name) %> alt="Treble" width="320" height='320'>
     <!-- Team memeber details, activated on hover -->
     <div class="about-overlay img-circle">
       <div class="social-icons sicon-white">
@@ -13,8 +13,7 @@
   </div>
   <!-- Team member name and function -->
   <h5>
-    <%= name %><br/>
-    <small>Developer</small>
+    <%= name_sanitizer(name) %><br/>
   </h5>
   <!-- Team member short info -->
   <p class="smallFontBy08"><%#= quote %>.</p>

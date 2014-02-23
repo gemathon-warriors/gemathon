@@ -3,13 +3,7 @@ class HomeController < ApplicationController
   protect_from_forgery :except => [:twitter]
 
   def index
-    @team_member_names = {
-      'ashish'   => "Programming is like sex. One mistake and you have to support it for the rest of your life.”",
-      'gourav'   => "When debugging, novices insert corrective code; experts remove defective code",
-      'nikhil'   => "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.",
-      'ankur'    => "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.",
-      'hrishita' => "Measuring programming progress by lines of code is like measuring aircraft building progress by weight."
-    }
+    @team_member_names = Dir.entries("#{Rails.root}/app/assets/assets/images/team_member/")[3..-1].shuffle
   end
 
   def spicon_gem
@@ -27,9 +21,9 @@ class HomeController < ApplicationController
     #   :consumer_key    => "",
     #   :consumer_secret => "",
     # }
-    
+
     # client = Twitter::REST::Client.new(config)
-    
+
     # tweets = collect_with_max_id do |max_id|
     #   options = {:count => 200, :include_rts => true}
     #   options[:max_id] = max_id unless max_id.nil?

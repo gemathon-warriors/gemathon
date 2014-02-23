@@ -1,5 +1,13 @@
 module HomeHelper
 
+  def construct_image_path(name)
+    "assets/images/team_member/" + name
+  end
+
+  def name_sanitizer(name)
+    name.split(".").first.split("_").first.capitalize
+  end
+
   def facebook(name)
     case name
     when 'ashish'
