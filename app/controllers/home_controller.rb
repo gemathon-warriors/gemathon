@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   protect_from_forgery :except => [:twitter]
 
   def index
-    @team_member_names = Dir.entries("#{Rails.root}/app/assets/assets/images/team_member/")[3..-1].shuffle
+    @team_member_names = Dir.glob("#{Rails.root}/app/assets/assets/images/team_member/*").shuffle
     @gems = Library.all.shuffle
   end
 

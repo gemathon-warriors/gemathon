@@ -1,7 +1,7 @@
 <li class="span4 center">
   <div class="item">
     <!-- Team member image -->
-    <img class="img-circle ashsih" src=<%= construct_image_path(name) %> alt="Treble" width="320" height='320'>
+    <img class="img-circle ashsih" src=<%= construct_image_path(name.split('/').last) %> alt="Treble" width="320" height='320'>
     <!-- Team memeber details, activated on hover -->
     <div class="about-overlay img-circle">
       <div class="social-icons sicon-white">
@@ -13,7 +13,7 @@
   </div>
   <!-- Team member name and function -->
   <h5>
-    <%= name_sanitizer(name) %><br/>
+    <%= name_sanitizer(name.split('/').last) %><br/>
   </h5>
   <!-- Team member short info -->
   <p class="smallFontBy08"><%#= quote %>.</p>
