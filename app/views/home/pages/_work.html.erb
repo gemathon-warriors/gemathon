@@ -23,18 +23,11 @@
           <li>
             <a href="#" class="plugin-filter active" data-filter="all">All</a>
           </li>
+            <% gem_classification(@gems).each do |classification| %>
           <li>
-            <a href="#" class="plugin-filter" data-filter="database">Database</a>
+            <a href="#" class="plugin-filter" data-filter=<%= classification %> > <%= classification %> </a>
           </li>
-          <li>
-            <a href="#" class="plugin-filter" data-filter="css">CSS</a>
-          </li>
-          <li>
-            <a href="#" class="plugin-filter" data-filter="time">Time</a>
-          </li>
-          <li>
-            <a href="#" class="plugin-filter" data-filter="date">Date</a>
-          </li>
+          <% end %>
         </ul>
       </nav>
     </header>
@@ -47,10 +40,9 @@
                     portfolio-items: Customise portfolio items for hover effect.
             -->
       <ul class="thumbnails plugin-filter-elements portfolio-items">
-        <%= render :partial => 'home/portfolio_items/database' %>
-        <%= render :partial => 'home/portfolio_items/css' %>
-        <%= render :partial => 'home/portfolio_items/time' %>
-        <%= render :partial => 'home/portfolio_items/date' %>
+        <% @gems.each do |gem_info|%>
+          <%= render 'home/portfolio_items/gem_info', :gem_data => gem_info %>
+        <% end %>
       </ul>
     </article>
     <!-- End Article -->

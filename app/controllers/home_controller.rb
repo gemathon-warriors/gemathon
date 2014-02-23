@@ -4,6 +4,7 @@ class HomeController < ApplicationController
 
   def index
     @team_member_names = Dir.entries("#{Rails.root}/app/assets/assets/images/team_member/")[3..-1].shuffle
+    @gems = Library.all.shuffle
   end
 
   def spicon_gem

@@ -1,5 +1,23 @@
 module HomeHelper
 
+  def gem_classification(gems)
+    classes = []
+    gems.each.each do | gem_info |
+      gem_info.classification.split(" ").each do |klass|
+        classes <<  klass
+      end
+    end
+    classes.uniq
+  end
+
+  def gem_image_file(gem_data)
+    "<div class='text_over_image span3 img-circle img-rounded'>#{gem_data.name}</div>".html_safe 
+  end
+
+  def image_file_exists?(gem_data)
+    File.exists?("#{Rails.root}/app/assets/assets/images/#{gem_data.name.downcase}.png")
+  end
+
   def construct_image_path(name)
     "assets/images/team_member/" + name
   end
