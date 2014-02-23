@@ -23,7 +23,7 @@ module HomeHelper
   end
 
   def name_sanitizer(name)
-    name.split(".").first.split("_").first.capitalize
+    name.split(".").first.split("_").first.capitalize unless .split(".").first.nil?
   end
 
   def facebook(name)
