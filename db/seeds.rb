@@ -29,6 +29,7 @@ Library.create({name: 'array_zipper', git_url: "https://github.com/Gemathon-Lapi
 Library.create({name: 'multi_sort', git_url: "https://github.com/Gemathon-Lapidarists/multi_sort", classification: 'Ruby'})
 Library.create({name: 'fork_ribs', git_url: "https://github.com/vipulchhabra/fork_ribs", classification: 'CSS'})
 Library.create({name: 'string-surgeon', git_url: "https://github.com/himaenshu/string-surgeon", classification: 'Ruby'})
+Library.create({name: 'nested_column_sorting', git_url: "https://github.com/Gemophiliacs/Nested_Column_Sorting", classification: 'Ruby'})
 Library.create({name: 'excel_checker', git_url: "https://github.com/GemBursters/excel_checker", classification: 'Ruby'})
 Library.create({name: 'logme', git_url: "https://github.com/GemBursters/logme", classification: 'Ruby'})
 Library.create({name: 'specialcharacterchecker', git_url: "https://github.com/GemBursters/specialcharacterchecker", classification: 'Ruby'})
