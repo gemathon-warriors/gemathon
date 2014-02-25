@@ -30,8 +30,10 @@ Library.create({name: 'multi_sort', git_url: "https://github.com/Gemathon-Lapida
 Library.create({name: 'fork_ribs', git_url: "https://github.com/vipulchhabra/fork_ribs", classification: 'CSS'})
 Library.create({name: 'string-surgeon', git_url: "https://github.com/himaenshu/string-surgeon", classification: 'Ruby'})
 Library.create({name: 'excel_checker', git_url: "https://github.com/GemBursters/excel_checker", classification: 'Ruby'})
-Library.create({name: 'excel_checker', git_url: "https://github.com/GemBursters/excel_checker", classification: 'Ruby'})
-Library.create({name: 'excel_checker', git_url: "https://github.com/GemBursters/excel_checker", classification: 'Ruby'})
-Library.create({name: 'excel_checker', git_url: "https://github.com/GemBursters/excel_checker", classification: 'Ruby'})
+Library.create({name: 'logme', git_url: "https://github.com/GemBursters/logme", classification: 'Ruby'})
+Library.create({name: 'specialcharacterchecker', git_url: "https://github.com/GemBursters/specialcharacterchecker", classification: 'Ruby'})
 
-
+Library.create({name: 'github-contributions', git_url: "https://github.com/Manik-Ratnas/github-contributions", classification: 'Ruby'})
+Library.create({name: 'scent', git_url: "https://github.com/pythonicrubyist/scent", classification: 'Ruby'})
+Library.create({name: 'junkyard', git_url: "https://github.com/pythonicrubyist/junkyard", classification: 'Ruby'})
+Library.create({name: 'xlsxtojson', git_url: "https://github.com/pythonicrubyist/xlsx2json", classification: 'Ruby'})
