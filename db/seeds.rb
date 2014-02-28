@@ -8,7 +8,7 @@
 
 Library.create({name: 'Tareek', git_url: 'https://github.com/gemathon-warriors/tareek', classification: 'Date Time'})
 Library.create({name: 'Timezonify', git_url: 'https://github.com/gemathon-warriors/timezonify', classification: 'Date Time'})
-Library.create({name: 'spicon', git_url: 'https://github.com/gemathon-warriors/spicon', classification: 'css'})
+Library.create({name: 'spicon', git_url: 'https://github.com/gemathon-warriors/spicon', classification: 'CSS'})
 Library.create({name: 'contineo', git_url: 'https://github.com/gemathon-warriors/contineo', classification: 'Database'})
 Library.create({name: 'strolljs-rails', git_url: "https://github.com/gemathon-warriors/strolljs-rails", classification: 'Javascript'})
 Library.create({name: 'week_calc', git_url: "https://github.com/Gemathon-Chargers/week_calc", classification: 'Date Time'})
