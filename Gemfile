@@ -17,6 +17,8 @@ end
 
 gem 'spicon'
 gem 'tareek'
+gem 'rest_client'
+gem "twitter-bootstrap-rails"
 
 group :development do
   gem 'sqlite3'

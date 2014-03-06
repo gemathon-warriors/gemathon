@@ -1,5 +1,22 @@
-<li class="span3 mix <%= gem_data.classification %>">
+<li class="span3 mix <%= gem_data.classification %> gem-link" id="<%= gem_data.name %>" >
   <a href=<%= gem_data.git_url %> data-destination="portfolio-items" data-insert="before">
     <%= gem_image_file(gem_data) %>
   </a>
 </li>
+
+<script type="text/javascript">
+	$('.gem-link').popover({
+		html: true,
+		trigger: 'hover',
+		delay: { show: 10, hide: 10 },
+		placement: 'top',
+		container: 'body',
+		animation: true
+	});
+
+	$(function(){
+		$.get("/gem_info?gem_name=<%= gem_data.name %>", function( data ) {
+			  $("#<%= gem_data.name %>").attr( 'data-content', data);
+		});
+	});
+</script>

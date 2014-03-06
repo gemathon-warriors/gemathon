@@ -11,4 +11,6 @@ Warriors::Application.routes.draw do
 
   root 'home#index'
 
+  match '/gem_info' => 'home#gem_info', via: [:get]
+
 end
